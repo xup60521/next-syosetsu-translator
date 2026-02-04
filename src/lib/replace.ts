@@ -28,28 +28,28 @@ export async function replace_words(
         if (tags?.includes(series_name)) {
             // check if series_name is in tags
             for (const [key, value] of Object.entries(
-                replace_keywords[series_name]
+                replace_keywords[series_name]!
             ).sort((a, b) => b[0].length - a[0].length) as [string, string][]) {
                 str = str.replaceAll(key, value);
             }
         } else if (series_title_and_author?.includes(series_name)) {
             // if series_title_and_author includes series_name, replace all keywords
             for (const [key, value] of Object.entries(
-                replace_keywords[series_name]
+                replace_keywords[series_name]!
             ).sort((a, b) => b[0].length - a[0].length) as [string, string][]) {
                 str = str.replaceAll(key, value);
             }
         } else if (title?.includes(series_name)) {
             // if title includes series_name, replace all keywords
             for (const [key, value] of Object.entries(
-                replace_keywords[series_name]
+                replace_keywords[series_name]!
             ).sort((a, b) => b[0].length - a[0].length) as [string, string][]) {
                 str = str.replaceAll(key, value);
             }
         } else if (str.includes(series_name)) {
             // if str includes series_name, replace all keywords
             for (const [key, value] of Object.entries(
-                replace_keywords[series_name]
+                replace_keywords[series_name]!
             ).sort((a, b) => b[0].length - a[0].length) as [string, string][]) {
                 str = str.replaceAll(key, value);
             }

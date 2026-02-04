@@ -61,10 +61,10 @@ export function chunkArray<T>(arr: T[], chunkSize: number): T[][] {
     // If the last chunk is shorter than the previous, merge the last two chunks
     if (
         result.length > 1 &&
-        result[result.length - 1].length < result[result.length - 2].length
+        result[result.length - 1]!.length < result[result.length - 2]!.length
     ) {
         const last = result.pop()!;
-        result[result.length - 1] = result[result.length - 1].concat(last);
+        result[result.length - 1] = result[result.length - 1]!.concat(last);
     }
     return result;
 }

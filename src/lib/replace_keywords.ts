@@ -445,10 +445,10 @@ const replace_keywords: Record<string, Record<string, string>> = {
     },
 } as const;
 
-replace_keywords["#本好き"] = replace_keywords["本好きの下剋上"];
-replace_keywords["本好き"] = replace_keywords["本好きの下剋上"];
-replace_keywords["本ゲコ"] = replace_keywords["本好きの下剋上"];
-replace_keywords["本好き【二次】"] = replace_keywords["本好きの下剋上"];
-replace_keywords["フェルマイ"] = replace_keywords["本好きの下剋上"];
+replace_keywords["#本好き"] = replace_keywords["本好きの下剋上"]!;
+replace_keywords["本好き"] = replace_keywords["本好きの下剋上"]!;
+replace_keywords["本ゲコ"] = replace_keywords["本好きの下剋上"]!;
+replace_keywords["本好き【二次】"] = replace_keywords["本好きの下剋上"]!;
+replace_keywords["フェルマイ"] = replace_keywords["本好きの下剋上"]!;
 
 export { replace_keywords };
